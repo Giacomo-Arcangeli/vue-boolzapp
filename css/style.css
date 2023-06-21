@@ -11,6 +11,10 @@ body{
     margin: 30px 0;
 }
 
+li{
+    list-style-type: none;
+}
+
 .container-box{
     border: 2px dashed red;
     height: 630px;
@@ -18,21 +22,32 @@ body{
     display: flex;
 }
 
+.user-avatar{
+    width: 23%;
+    border-radius: 50%;
+}
+
+.contact-avatar{
+    width: 18%;
+    border-radius: 50%;
+}
+
 /* LEFT BOX */
 
 .left-box{
-    border: 2px dashed blue;
     height: 100%;
     flex-basis: 35%;
 }
 
 .user-menu{
-    border: 2px dashed red;
+    background-color: rgb(234,234,234);
     height: 70px;
     width: 100%;
+    display: flex;
+    align-items: center;
 }
+
 .notice{
-    border: 2px dashed red;
     height: 80px;
     width: 100%;
 }
@@ -40,7 +55,6 @@ body{
 .search-bar{
     width: 100%;
     font-size: 14px;
-    margin: 5px 0;
 }
 
 .contact-list{
@@ -49,11 +63,35 @@ body{
     overflow: auto;
 }
 
+.notice{
+    background-color: rgb(143,219,252);
+    display: flex;
+    align-items: center;
+}
+
+.fa-bell-slash{
+    color: rgb(143,219,252);
+    background-color: white;
+    border-radius: 50%;
+    padding: 14px 10px;
+}
+
+.active-notice{
+    font-size: 14px;
+    color: gray;
+    text-decoration: underline;
+}
+
+.line{
+    padding: 10px 0;
+    border-bottom: 1px solid lightgray;
+}
+
 /* RIGHT BOX */
 
 .right-box{
     border: 2px dashed green;
     height: 100%;
-    flex-basis: 75%;
+    flex-basis: 65%;
 }
 

@@ -11,6 +11,8 @@
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- VueJS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
@@ -25,13 +27,39 @@
 
             <!-- LEFT BOX -->
             <div class="left-box">
+                <!-- user menu -->
                 <div class="user-menu px-3">
+                    <div class="d-flex align-items-center">
+                        <img src="img/avatar_5.jpg" alt="" class="user-avatar">
+                        <div class="ps-2">Giacomo</div>
+                    </div>
+                    <div class="menu-buttons d-flex align-items-center">
+                        <i class="fa-solid ps-3 fs-5 text-muted fa-circle-notch"></i>
+                        <i class="fa-solid ps-3 fs-5 text-muted fa-message"></i>
+                        <i class="fa-solid ps-3 fs-5 text-muted fa-ellipsis-vertical"></i>
+                    </div>
                 </div>
-                <div class="notice px-3"></div>
-                <input type="search" class="form-control search-bar px-3" placeholder="Cerca o inizia una nuova chat">
-                <div class="contact-list px-3">
+                <!-- notifiche -->
+                <div class="notice px-3">
+                    <i class="fa-solid fa-bell-slash fs-5"></i>
+                    <div class="ps-2">
+                        <div>Ricevi notifiche di nuovi messaggi</div>
+                        <div class="active-notice">Attiva notifiche desktop</div>
+                    </div>
                 </div>
+                <!-- cerca -->
+                <input type="search" class="form-control search-bar px-5" placeholder="&#x1F50D; Cerca o inizia una nuova chat">
+                <!-- contact list -->
+                <ul class="contact-list px-3">
+                    <li class="line">
+                        <div class="d-flex align-items-center">
+                            <img src="img/avatar_5.jpg" alt="" class="contact-avatar">
+                            <div class="px-3 pb-4">Giacomo</div>
+                        </div>
+                    </li> 
+                </ul>
             </div>
+
             <!-- RIGHT BOX -->
             <div class="right-box"></div>
         </div>
