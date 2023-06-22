@@ -22,11 +22,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <div class="container-box">
+    <div class="d-flex align-items-center justify-content-center h-100">
+        <main class="container-box">
 
             <!-- LEFT BOX -->
-            <div class="left-box">
+            <section class="left-box">
                 <!-- user menu -->
                 <div class="user-menu px-3">
                     <div class="d-flex align-items-center">
@@ -39,7 +39,7 @@
                         <i class="fa-solid ps-3 fs-5 text-muted fa-ellipsis-vertical"></i>
                     </div>
                 </div>
-                <!-- notifiche -->
+                <!-- notice -->
                 <div class="notice px-3">
                     <i class="fa-solid fa-bell-slash fs-5"></i>
                     <div class="ps-2">
@@ -47,7 +47,7 @@
                         <div class="active-notice">Attiva notifiche desktop</div>
                     </div>
                 </div>
-                <!-- cerca -->
+                <!-- search -->
                 <input type="search" class="form-control search-bar px-5" placeholder="&#x1F50D; Cerca o inizia una nuova chat">
                 <!-- contact list -->
                 <ul class="contact-list px-3">
@@ -58,11 +58,43 @@
                         </div>
                     </li> 
                 </ul>
-            </div>
+            </section>
 
             <!-- RIGHT BOX -->
-            <div class="right-box"></div>
-        </div>
+            <section class="right-box">
+                <!-- header -->
+                <header>
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <img src="img/avatar_5.jpg" alt="" class="chat-avatar">
+                        </div>
+                        <div class="ps-2">
+                            <div>Michele</div>
+                            <small class="text-muted">Ultimo accesso oggi alle</small>
+                        </div>
+                    </div>
+                    <div class="icon-header">
+                        <i class="fa-solid fa-search ps-3 text-muted fs-5"></i>
+                        <i class="fa-solid fa-paperclip ps-3 text-muted fs-5"></i>
+                        <i class="fa-solid ps-3 fs-5 text-muted fa-ellipsis-vertical"></i>
+                    </div>
+                </header>
+                <!-- chat -->
+                <section class="chat-section"></section>
+                <!-- footer -->
+                <footer class="px-3">
+                    <div class="smile">
+                        <i class= "fa-regular fa-smile fa-2x text-muted"></i>
+                    </div>
+                    <div class="message-input">
+                        <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                    </div>
+                    <div class="vocal">
+                        <i class= "fa-solid fa-microphone fa-2x text-muted"></i>
+                    </div>
+                </footer>
+            </section>
+        </main>
     </div>
 </body>
 </html>

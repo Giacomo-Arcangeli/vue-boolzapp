@@ -5,10 +5,8 @@
 }
 
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0;
+    height: 100vh;
+    background-image: linear-gradient(rgb(0,151,137) 20%, rgb(219,220,212) 15%);
 }
 
 li{
@@ -16,10 +14,10 @@ li{
 }
 
 .container-box{
-    border: 2px dashed red;
-    height: 630px;
+    height: 700px;
     width: 1100px;
     display: flex;
+    background-color: white;
 }
 
 .user-avatar{
@@ -37,6 +35,7 @@ li{
 .left-box{
     height: 100%;
     flex-basis: 35%;
+    border-right: 2px solid lightgray;
 }
 
 .user-menu{
@@ -55,6 +54,7 @@ li{
 .search-bar{
     width: 100%;
     font-size: 14px;
+    margin: 5px 0;
 }
 
 .contact-list{
@@ -73,7 +73,7 @@ li{
     color: rgb(143,219,252);
     background-color: white;
     border-radius: 50%;
-    padding: 14px 10px;
+    padding: 15px 12px;
 }
 
 .active-notice{
@@ -87,11 +87,57 @@ li{
     border-bottom: 1px solid lightgray;
 }
 
+.line:hover{
+    background-color: rgb(234,234,234);
+    cursor: pointer;
+}
+
 /* RIGHT BOX */
 
 .right-box{
-    border: 2px dashed green;
     height: 100%;
     flex-basis: 65%;
+    display: flex;
+    flex-direction: column;
 }
 
+header{
+    height: 70px;
+    flex-shrink: 0;
+    padding:  5px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(234,234,234);
+}
+
+.chat-section{
+    flex-grow: 1;
+    overflow: auto;
+}
+
+footer{
+    height: 70px;
+    flex-shrink: 0;
+}
+
+.chat-avatar{
+    width: 60px;
+    border-radius: 50%;
+}
+
+.chat-section{
+    background-image: url(../img/mine.jpg);
+}
+
+
+footer{
+    background-color: rgb(234,234,234);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.message-input{
+    flex-basis: 85%;
+}
