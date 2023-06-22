@@ -141,3 +141,22 @@ footer{
 .message-input{
     flex-basis: 85%;
 }
+
+/* chat section */
+.message-box-sent{
+    border-radius: 10px;
+    background-color: rgb(213,249,186);
+}
+
+.message-box-received{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.time{
+    color: gray;
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-end;
+}
+
