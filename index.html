@@ -10,107 +10,108 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
-
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <!-- VueJS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
+    
     <!-- JavaScript -->
     <script defer src="js/script.js"></script>
     
     <title>Document</title>
 </head>
 <body>
-    <div class="d-flex align-items-center justify-content-center h-100">
-        <main class="container-box">
 
-            <!-- LEFT BOX -->
-            <section class="left-box">
-                <!-- user menu -->
-                <div class="user-menu px-3">
-                    <div class="d-flex align-items-center">
-                        <img src="img/avatar_5.jpg" alt="" class="user-avatar">
-                        <div class="ps-2">Giacomo</div>
-                    </div>
-                    <div class="menu-buttons d-flex align-items-center">
-                        <i class="fa-solid ps-3 fs-5 text-muted fa-circle-notch"></i>
-                        <i class="fa-solid ps-3 fs-5 text-muted fa-message"></i>
-                        <i class="fa-solid ps-3 fs-5 text-muted fa-ellipsis-vertical"></i>
-                    </div>
-                </div>
-                <!-- notice -->
-                <div class="notice px-3">
-                    <i class="fa-solid fa-bell-slash fs-5"></i>
-                    <div class="ps-2">
-                        <div>Ricevi notifiche di nuovi messaggi</div>
-                        <div class="active-notice">Attiva notifiche desktop</div>
-                    </div>
-                </div>
-                <!-- search -->
-                <input type="search" class="form-control search-bar px-5" placeholder="&#x1F50D; Cerca o inizia una nuova chat">
-                <!-- contact list -->
-                <ul class="contact-list px-3">
-                    <li class="line">
+        <div id="root" class="d-flex align-items-center justify-content-center h-100">
+            <main class="container-box">
+    
+                <!-- LEFT BOX -->
+                <section class="left-box">
+                    <!-- user menu -->
+                    <div class="user-menu px-3">
                         <div class="d-flex align-items-center">
-                            <img src="img/avatar_5.jpg" alt="" class="contact-avatar">
-                            <div class="px-3 pb-4">Giacomo</div>
+                            <img :src="`img/avatar${user.avatar}.jpg`" :alt="user.name" class="user-avatar">
+                            <div class="ps-2">{{user.name}}</div>
                         </div>
-                    </li> 
-                </ul>
-            </section>
-
-            <!-- RIGHT BOX -->
-            <section class="right-box">
-                <!-- header -->
-                <header>
-                    <div class="d-flex align-items-center">
-                        <div>
-                            <img src="img/avatar_5.jpg" alt="" class="chat-avatar">
+                        <div class="menu-buttons d-flex align-items-center">
+                            <i class="fa-solid ps-3 fs-5 text-muted fa-circle-notch"></i>
+                            <i class="fa-solid ps-3 fs-5 text-muted fa-message"></i>
+                            <i class="fa-solid ps-3 fs-5 text-muted fa-ellipsis-vertical"></i>
                         </div>
+                    </div>
+                    <!-- notice -->
+                    <div class="notice px-3">
+                        <i class="fa-solid fa-bell-slash fs-5"></i>
                         <div class="ps-2">
-                            <div>Michele</div>
-                            <small class="text-muted">Ultimo accesso oggi alle</small>
+                            <div>Ricevi notifiche di nuovi messaggi</div>
+                            <div class="active-notice">Attiva notifiche desktop</div>
                         </div>
                     </div>
-                    <div class="icon-header">
-                        <i class="fa-solid fa-search ps-3 text-muted fs-5"></i>
-                        <i class="fa-solid fa-paperclip ps-3 text-muted fs-5"></i>
-                        <i class="fa-solid ps-3 fs-5 text-muted fa-ellipsis-vertical"></i>
-                    </div>
-                </header>
-                <!-- chat -->
-                <section class="chat-section">
-                    <ul class="px-3">
-                        <li class=" p-3 d-flex justify-content-end">
-                            <div class="p-2 message-box-sent">
-                                <p>Hai portato a spasso il cane?</p>
-                                <time datetime="2021-08-03T09:53" class="time">31/01/2022 - 12:13</time>
+                    <!-- search -->
+                    <input type="search" class="form-control search-bar px-5" placeholder="&#x1F50D; Cerca o inizia una nuova chat">
+                    <!-- contact list -->
+                    <ul class="contact-list px-3">
+                        <li v-for="contact in contacts" class="line">
+                            <div class="d-flex align-items-center">
+                                <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name" class="contact-avatar">
+                                <div class="px-3 pb-4">{{contact.name}}</div>
                             </div>
-                        </li>
-                        <li class=" p-3 d-flex">
-                            <div class="p-2 message-box-received">
-                                <p>Hai portato a spasso il cane?</p>
-                                <time datetime="2021-08-03T09:53" class="time">31/01/2022 - 12:13</time>
-                            </div>
-                        </li>
+                        </li> 
                     </ul>
                 </section>
-                <!-- footer -->
-                <footer class="px-3">
-                    <div class="smile">
-                        <i class= "fa-regular fa-smile fa-2x text-muted"></i>
-                    </div>
-                    <div class="message-input">
-                        <input type="text" class="form-control" placeholder="Scrivi un messaggio">
-                    </div>
-                    <div class="vocal">
-                        <i class= "fa-solid fa-microphone fa-2x text-muted"></i>
-                    </div>
-                </footer>
-            </section>
-        </main>
-    </div>
+    
+                <!-- RIGHT BOX -->
+                <section class="right-box">
+                    <!-- header -->
+                    <header>
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <img src="img/avatar_5.jpg" alt="" class="chat-avatar">
+                            </div>
+                            <div class="ps-2">
+                                <div>Michele</div>
+                                <small class="text-muted">Ultimo accesso oggi alle</small>
+                            </div>
+                        </div>
+                        <div class="icon-header">
+                            <i class="fa-solid fa-search ps-3 text-muted fs-5"></i>
+                            <i class="fa-solid fa-paperclip ps-3 text-muted fs-5"></i>
+                            <i class="fa-solid ps-3 fs-5 text-muted fa-ellipsis-vertical"></i>
+                        </div>
+                    </header>
+                    <!-- chat -->
+                    <section class="chat-section">
+                        <ul class="px-3">
+                            <li class=" p-3 d-flex justify-content-end">
+                                <div class="p-2 message-box-sent">
+                                    <p>Hai portato a spasso il cane?</p>
+                                    <time datetime="2021-08-03T09:53" class="time">31/01/2022 - 12:13</time>
+                                </div>
+                            </li>
+                            <li class=" p-3 d-flex">
+                                <div class="p-2 message-box-received">
+                                    <p>Hai portato a spasso il cane?</p>
+                                    <time datetime="2021-08-03T09:53" class="time">31/01/2022 - 12:13</time>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- footer -->
+                    <footer class="px-3">
+                        <div class="smile">
+                            <i class= "fa-regular fa-smile fa-2x text-muted"></i>
+                        </div>
+                        <div class="message-input">
+                            <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                        </div>
+                        <div class="vocal">
+                            <i class= "fa-solid fa-microphone fa-2x text-muted"></i>
+                        </div>
+                    </footer>
+                </section>
+            </main>
+        </div>
+
 </body>
 </html>
-<!-- <div id="root"></div> -->

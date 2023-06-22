@@ -59,7 +59,7 @@ li{
 
 .contact-list{
     width: 100%;
-    height: calc(100vh - 365px);
+    height: calc(100vh - 290px);
     overflow: auto;
 }
 
