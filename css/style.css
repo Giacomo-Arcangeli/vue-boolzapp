@@ -55,16 +55,31 @@ li {
     flex-shrink: 0;
 }
 
+.search-box {
+    position: relative;
+    flex-shrink: 0;
+    padding: 5px 10px;
+    background-color: rgb(234, 234, 234);
+}
+
+.search-icon {
+    position: absolute;
+    top: 18px;
+    left: 26px;
+}
+
 .search-bar {
-    width: 100%;
     font-size: 14px;
     margin: 5px 0;
+    flex-shrink: 0;
+    border: 0;
 }
 
 .contact-list {
     width: 100%;
     flex-grow: 1;
     overflow: auto;
+    margin-top: 1px;
 }
 
 .notice {
@@ -146,6 +161,10 @@ footer {
     flex-basis: 85%;
 }
 
+.message-input>input {
+    border: 0;
+}
+
 /* chat section */
 .sent {
     border-radius: 10px;
@@ -154,7 +173,8 @@ footer {
     padding: 10px;
     margin: 15px;
     position: relative;
-    left: 375px
+    left: 375px;
+    box-shadow: 2px 2px 5px rgb(179, 179, 179);
 }
 
 .received {
@@ -163,6 +183,7 @@ footer {
     width: 40%;
     padding: 10px;
     margin: 15px;
+    box-shadow: 2px 2px 5px rgb(179, 179, 179);
 }
 
 .time {

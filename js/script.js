@@ -227,7 +227,28 @@ const app = createApp({
     },
 
     // aggiungere un nuovo messaggio
-    addNewMessage() {},
+    addNewMessage() {
+      if (!this.newMessage) return;
+
+      const message = {
+        id: new Date().getTime(),
+        date: new Date().toLocaleString(),
+        message: this.newMessage,
+        status: "sent",
+      };
+      this.currentContact.messages.push(message);
+      this.newMessage = "";
+
+      setTimeout(() => {
+        const answer = {
+          id: new Date().getTime(),
+          date: new Date().toLocaleString(),
+          message: "Ok",
+          status: "received",
+        };
+        this.currentContact.messages.push(answer);
+      }, 1500);
+    },
   },
 });
 

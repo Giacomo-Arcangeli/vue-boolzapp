@@ -54,8 +54,12 @@
                 </div>
 
                 <!-- search contact-->
-                <input v-model.trim="filteredWord" type="search" class="form-control search-bar px-4"
-                    placeholder="&#x1F50D; Cerca o inizia una nuova chat">
+                <div class="search-box">
+                    <i class="fa-solid fa-search text-muted search-icon"></i>
+                    <input v-model.trim="filteredWord" type="search" class="form-control search-bar px-5"
+                        placeholder="Cerca o inizia una nuova chat">
+                </div>
+
                 <!-- contact list -->
                 <ul class="contact-list px-3">
                     <li v-for="(contact, i) in filteredContacts" class="line" @click="setCurrentIndex(i)">
