@@ -24,7 +24,6 @@
 </head>
 
 <body>
-
     <div id="root" class="d-flex align-items-center justify-content-center h-100">
         <main class="container-box">
 
@@ -62,7 +61,7 @@
 
                 <!-- contact list -->
                 <ul class="contact-list px-3">
-                    <li v-for="(contact, i) in filteredContacts" class="line" @click="setCurrentIndex(i)">
+                    <li v-for="contact in filteredContacts" class="line" @click="setCurrentNumber(contact.id)">
                         <div class="d-flex align-items-center">
                             <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name" class="contact-avatar">
                             <div class="px-3 pb-4">{{contact.name}}</div>
@@ -119,7 +118,6 @@
             </section>
         </main>
     </div>
-
 </body>
 
 </html>

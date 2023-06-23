@@ -201,7 +201,7 @@ const app = createApp({
           ],
         },
       ],
-      currentIndex: 0,
+      currentNumber: 1,
       newMessage: "",
       filteredWord: "",
     };
@@ -209,7 +209,8 @@ const app = createApp({
 
   computed: {
     currentContact() {
-      return this.contacts[this.currentIndex];
+      //   return this.contacts[this.currentIndex];
+      return this.contacts.find((contact) => contact.id === this.currentNumber);
     },
 
     // cercare tra i contatti
@@ -222,8 +223,8 @@ const app = createApp({
   },
 
   methods: {
-    setCurrentIndex(i) {
-      this.currentIndex = i;
+    setCurrentNumber(number) {
+      this.currentNumber = number;
     },
 
     // aggiungere un nuovo messaggio
