@@ -143,14 +143,22 @@ footer{
 }
 
 /* chat section */
-.message-box-sent{
+.sent{
     border-radius: 10px;
     background-color: rgb(213,249,186);
+    width: 40%;
+    padding: 10px;
+    margin: 15px;
+    position: relative;
+    left: 375px
 }
 
-.message-box-received{
+.received{
     background-color: white;
     border-radius: 10px;
+    width: 40%;
+    padding: 10px;
+    margin: 15px;
 }
 
 .time{

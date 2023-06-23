@@ -30,6 +30,7 @@
 
             <!-- LEFT BOX -->
             <section class="left-box">
+
                 <!-- user menu -->
                 <div class="user-menu px-3">
                     <div class="d-flex align-items-center">
@@ -42,6 +43,7 @@
                         <i class="fa-solid ps-3 fs-5 text-muted fa-ellipsis-vertical"></i>
                     </div>
                 </div>
+
                 <!-- notice -->
                 <div class="notice px-3">
                     <i class="fa-solid fa-bell-slash fs-5"></i>
@@ -50,9 +52,11 @@
                         <div class="active-notice">Attiva notifiche desktop</div>
                     </div>
                 </div>
+
                 <!-- search contact-->
                 <input v-model.trim="filteredWord" type="search" class="form-control search-bar px-4"
                     placeholder="&#x1F50D; Cerca o inizia una nuova chat">
+                    
                 <!-- contact list -->
                 <ul class="contact-list px-3">
                     <li v-for="(contact, i) in filteredContacts" class="line" @click="setCurrentIndex(i)">
@@ -66,6 +70,7 @@
 
             <!-- RIGHT BOX -->
             <section class="right-box">
+
                 <!-- header -->
                 <header>
                     <div class="d-flex align-items-center">
@@ -84,23 +89,17 @@
                         <i class="fa-solid ps-3 fs-5 text-muted fa-ellipsis-vertical"></i>
                     </div>
                 </header>
+
                 <!-- chat -->
                 <section class="chat-section">
-                    <ul class="px-3">
-                        <li v-for="message in currentContact.messages" class=" p-3 d-flex justify-content-end">
-                            <div class="p-2 message-box-sent">
-                                <p></p>
-                                <time datetime="2021-08-03T09:53" class="time">31/01/2022 - 12:13</time>
-                            </div>
-                        </li>
-                        <li class=" p-3 d-flex">
-                            <div class="p-2 message-box-received">
-                                <p>Tutto fatto!</p>
-                                <time datetime="2021-08-03T09:53" class="time">31/01/2022 - 12:13</time>
-                            </div>
+                    <ul class="px-3 position-relative">
+                        <li v-for="m in currentContact.messages" :class="m.status">
+                            <p>{{m.message}}</p>
+                            <span class="time">{{m.date}}</span>
                         </li>
                     </ul>
                 </section>
+
                 <!-- footer -->
                 <footer class="px-3">
                     <div class="smile">
