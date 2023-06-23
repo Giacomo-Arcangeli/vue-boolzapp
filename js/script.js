@@ -225,7 +225,7 @@ const app = createApp({
     setCurrentIndex(i) {
       this.currentIndex = i;
     },
-    
+
     // aggiungere un nuovo messaggio
     addNewMessage() {},
   },
